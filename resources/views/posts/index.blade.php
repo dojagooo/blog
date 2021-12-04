@@ -8,18 +8,16 @@
     </head>
     <body>
         <h1>Blog Name</h1>
-        <div class='posts'>
+        <div class = 'posts'>
             @foreach ($posts as $post)
             <div class='post'>
-                <h2 class='title'>Title1</h2>
-                <p class='body'>This is a first sample body.</p>
-                <h2 class = 'title2'>Title2</h2>
-                <p class = 'body2'> This is a second sample body.</p>
+                <h2 class='title'>{{$post->title}}
+                    <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+                </h2>
+                <p class='body'>{{ $post->body}}</p>
             </div>
-            @endforeach
-        </div>
-        <div class = 'pagenate'>
-            {{ $posts->links() }}
+           @endforeach
+           </div>
         </div>
     </body>
 </html>
