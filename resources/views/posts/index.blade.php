@@ -17,8 +17,11 @@
                 </h2>
                 <p class='body'>{{ $post->body}}</p>
             </div>
-           @endforeach
-           </div>
+            @endforeach
+            
+           
+           
         </div>
+        
     </body>
 </html>
